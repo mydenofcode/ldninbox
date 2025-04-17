@@ -1,1 +1,6 @@
-
+-- This SQL file creates databse structures
+-- For our experiments it has multiple varinas
+-- 1. One user has one database 
+-- 2. Multiple users have one database
+--    - there is a table with references to other tables
+--      - there are multiple tables named according to inbox
