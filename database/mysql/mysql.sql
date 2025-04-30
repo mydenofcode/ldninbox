@@ -15,7 +15,7 @@ USE ldn_test;
 -- state of message in an inbox - could be unread, read, replied, deleted
 CREATE TABLE lc_inbox_state(
     id BIGINT AUTO_INCREMENT,
-    sysd VARCHAR(50) UNIQUE NOT NULL,
+    sysid VARCHAR(50) UNIQUE NOT NULL,
     name VARCHAR(200) UNIQUE NOT NULL,
     PRIMARY KEY (id),
     UNIQUE KEY (id),
@@ -76,7 +76,7 @@ USE ldn_test;
 -- state of message in an inbox - could be unread, read, replied, deleted
 CREATE TABLE lc_inbox_state(
     id BIGINT AUTO_INCREMENT,
-    sysd VARCHAR(50) UNIQUE NOT NULL,
+    sysid VARCHAR(50) UNIQUE NOT NULL,
     name VARCHAR(200) UNIQUE NOT NULL,
     PRIMARY KEY (id),
     UNIQUE KEY (id),
@@ -148,7 +148,7 @@ CREATE TABLE l_users(
 -- state of message in an inbox - could be unread, read, replied, deleted
 CREATE TABLE lc_inbox_state(
     id BIGINT AUTO_INCREMENT,
-    sysd VARCHAR(50) UNIQUE NOT NULL,
+    sysid VARCHAR(50) UNIQUE NOT NULL,
     name VARCHAR(200) UNIQUE NOT NULL,
     PRIMARY KEY (id),
     UNIQUE KEY (id),
