@@ -1,4 +1,13 @@
-# ldninbox
+# LDN inbox
+
+## Requieremenst
+
+1. For our example of LDNinbox implemetation we need a server with public IP and a domain name.
+1. We use UBuntu LTS 24 Server in our examples
+1. Database - MySQL, PostgreSQL or MongoDB
+1. PHP
+1. Apache2, modrewrite
+1. CURL
 
 ## Databases
 
