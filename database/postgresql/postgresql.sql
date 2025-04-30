@@ -43,3 +43,12 @@ CREATE TABLE l_logs_get (
     log_date TIMESTAMP WITHOUT TIME ZONE NOT NULL,
     ip VARCHAR(45) NOT NULL
 );
+
+-- initial inserts
+INSERT INTO lc_inbox_state(sysid,name) VALUES('unread','Unread message');
+INSERT INTO lc_inbox_state(sysid,name) VALUES('read','Read message');
+INSERT INTO lc_inbox_state(sysid,name) VALUES('replied','Replied message');
+INSERT INTO lc_inbox_state(sysid,name) VALUES('deleted','Deleted message');
+
+
+INSERT INTO l_users(name) VALUES ('martin');
