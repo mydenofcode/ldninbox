@@ -1,7 +1,8 @@
 --- MySQL, MariaDB implementation
 
 --- VARINAT: 1
---- Multiple users in one database, tables are modified with user names
+--- One user per one database
+--- Not an elegant sollution
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 
@@ -62,6 +63,7 @@ INSERT INTO lc_inbox_state(sysid,name) VALUES('deleted','Deleted message');
 
 --- VARINAT: 2
 --- Multiple users in one database, tables are modified with user names
+--- Not an elegant sollution
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 
