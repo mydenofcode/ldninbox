@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: myappdb
+      MYSQL_USER: myappuser
+      MYSQL_PASSWORD: myapppassword
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql/conf.d:/etc/mysql/conf.d  # Custom config files (optional)
+    networks:
+      - app-network
+
+  web:
+    image: your-web-app-image:latest  # Replace with your actual image name
+    container_name: web
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: myappdb
+      DB_USER: myappuser
+      DB_PASSWORD: myapppassword
+    ports:
+      - "8080:80"  # Host:Container
+    networks:
+      - app-network
+    volumes:
+      - ./app:/var/www/html  # Adjust for your app's code
+
+volumes:
+  mysql_data:
+
+networks:
+  app-network:
+    driver: bridge
