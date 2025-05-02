@@ -1,6 +1,6 @@
 ---
 - name: Setup LAMP stack on Ubuntu Server
-  hosts: webservers
+  hosts: ldninbixservers
   become: yes
 
   tasks:
